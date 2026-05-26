@@ -1,125 +1,204 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Az első világháború következményei</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legendás Amerikai Autók</title>
 
-    <style>
-        body{
-            margin:0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #f2f2f2, #d9d9d9);
-            color:#222;
-        }
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
 
-        header{
-            background:#8b0000;
-            color:white;
-            text-align:center;
-            padding:40px 20px;
-            box-shadow:0 4px 10px rgba(0,0,0,0.3);
-        }
+    body{
+      background:#111;
+      color:white;
+    }
 
-        header h1{
-            margin:0;
-            font-size:42px;
-        }
+    header{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
 
-        .container{
-            width:90%;
-            max-width:1100px;
-            margin:auto;
-            padding:40px 20px;
-        }
+    header h1{
+      font-size:70px;
+      background:rgba(0,0,0,0.6);
+      padding:20px 40px;
+      border-radius:15px;
+      text-shadow:0 0 20px red;
+    }
 
-        .image-box{
-            text-align:center;
-            margin-bottom:40px;
-        }
+    nav{
+      background:#000;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
 
-        .image-box img{
-            width:100%;
-            max-width:900px;
-            border-radius:15px;
-            box-shadow:0 0 20px rgba(0,0,0,0.3);
-        }
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      gap:30px;
+    }
 
-        .content{
-            background:white;
-            padding:30px;
-            border-radius:15px;
-            box-shadow:0 0 15px rgba(0,0,0,0.2);
-            line-height:1.8;
-        }
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+    }
 
-        .highlight{
-            color:#b30000;
-            font-weight:bold;
-            background:#ffe5e5;
-            padding:3px 6px;
-            border-radius:5px;
-        }
+    nav a:hover{
+      color:red;
+    }
 
-        footer{
-            text-align:center;
-            padding:20px;
-            background:#222;
-            color:white;
-            margin-top:40px;
-        }
-    </style>
+    .cars{
+      padding:60px 10%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1b1b1b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(255,0,0,0.2);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px red;
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      color:#ff3131;
+    }
+
+    .card p{
+      line-height:1.6;
+      color:#ddd;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#000;
+      margin-top:40px;
+      color:#aaa;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 20px;
+      background:red;
+      color:white;
+      border-radius:10px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ff4d4d;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Az első világháború következményei</h1>
-    </header>
+  <header>
+    <h1>AMERICAN MUSCLE CARS</h1>
+  </header>
 
-    <div class="container">
+  <nav>
+    <ul>
+      <li><a href="#mustang">Mustang</a></li>
+      <li><a href="#challenger">Challenger</a></li>
+      <li><a href="#raptor">Raptor</a></li>
+      <li><a href="#hellcat">Hellcat</a></li>
+    </ul>
+  </nav>
 
-        <!-- IDE TUDSZ MAJD KÉPET BERAKNI -->
-        <div class="image-box">
-            <img src="kep.jpg" alt="Első világháború">
-        </div>
+  <section class="cars">
 
-        <div class="content">
-            <h2>Történelmi háttér</h2>
-
-            <p>
-                Az első világháború 1914 és 1918 között zajlott, és hatalmas
-                pusztítást okozott Európában. A háború után több ország
-                gazdasága összeomlott, milliók vesztették életüket,
-                és teljesen megváltozott Európa politikai térképe.
-            </p>
-
-            <p>
-                A legnagyobb vesztesek közé tartozott
-                <span class="highlight">Magyarország</span>,
-                amely a trianoni békeszerződés következtében elveszítette
-                területének és lakosságának nagy részét.
-            </p>
-
-            <p>
-                <span class="highlight">Magyarország</span> számára
-                a háború következményei gazdasági válságot,
-                társadalmi problémákat és politikai instabilitást okoztak.
-                Sok magyar család került nehéz helyzetbe,
-                és az ország hosszú időn keresztül próbálta feldolgozni
-                a veszteségeket.
-            </p>
-
-            <p>
-                A világháború következményei a mai napig fontos részei
-                a történelemnek és a magyar nemzeti emlékezetnek.
-            </p>
-        </div>
-
+    <div class="card" id="mustang">
+      <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Ford Mustang</h2>
+        <p>
+          Az egyik legismertebb amerikai izomautó.
+          Brutális V8 hang, agresszív dizájn és elképesztő teljesítmény.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
     </div>
 
-    <footer>
-        Készítette: Dudli Zsombor
-    </footer>
+    <div class="card" id="challenger">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Dodge Challenger</h2>
+        <p>
+          Klasszikus muscle car modern erővel.
+          Hatalmas motorok és legendás megjelenés.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+    <div class="card" id="raptor">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Ford Raptor</h2>
+        <p>
+          Off-road szörnyeteg, amely sivatagban és városban is uralkodik.
+          Extrém felfüggesztés és brutális teljesítmény.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+    <div class="card" id="hellcat">
+      <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Hellcat</h2>
+        <p>
+          A Hellcat név egyet jelent az őrült lóerőkkel.
+          Kompresszoros V8 motor és elképesztő gyorsulás.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 American Cars | Készítette: Te 🚗
+  </footer>
+
+  <script>
+    console.log("Autós weboldal betöltve!");
+  </script>
 
 </body>
 </html>
