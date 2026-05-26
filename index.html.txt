@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legendás Amerikai Autók</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#111;
+      color:white;
+    }
+
+    header{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:70px;
+      background:rgba(0,0,0,0.6);
+      padding:20px 40px;
+      border-radius:15px;
+      text-shadow:0 0 20px red;
+    }
+
+    nav{
+      background:#000;
+      padding:15px;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:red;
+    }
+
+    .cars{
+      padding:60px 10%;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:#1b1b1b;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.4s;
+      box-shadow:0 0 15px rgba(255,0,0,0.2);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 0 25px red;
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      color:#ff3131;
+    }
+
+    .card p{
+      line-height:1.6;
+      color:#ddd;
+    }
+
+    footer{
+      text-align:center;
+      padding:30px;
+      background:#000;
+      margin-top:40px;
+      color:#aaa;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 20px;
+      background:red;
+      color:white;
+      border-radius:10px;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#ff4d4d;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AMERICAN MUSCLE CARS</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#mustang">Mustang</a></li>
+      <li><a href="#challenger">Challenger</a></li>
+      <li><a href="#raptor">Raptor</a></li>
+      <li><a href="#hellcat">Hellcat</a></li>
+    </ul>
+  </nav>
+
+  <section class="cars">
+
+    <div class="card" id="mustang">
+      <img src="https://images.unsplash.com/photo-1584345604476-8ec5e12e42dd?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Ford Mustang</h2>
+        <p>
+          Az egyik legismertebb amerikai izomautó.
+          Brutális V8 hang, agresszív dizájn és elképesztő teljesítmény.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+    <div class="card" id="challenger">
+      <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Dodge Challenger</h2>
+        <p>
+          Klasszikus muscle car modern erővel.
+          Hatalmas motorok és legendás megjelenés.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+    <div class="card" id="raptor">
+      <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Ford Raptor</h2>
+        <p>
+          Off-road szörnyeteg, amely sivatagban és városban is uralkodik.
+          Extrém felfüggesztés és brutális teljesítmény.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+    <div class="card" id="hellcat">
+      <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1200&auto=format&fit=crop">
+      <div class="card-content">
+        <h2>Hellcat</h2>
+        <p>
+          A Hellcat név egyet jelent az őrült lóerőkkel.
+          Kompresszoros V8 motor és elképesztő gyorsulás.
+        </p>
+        <a href="#" class="btn">Részletek</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 American Cars | Készítette: Te 🚗
+  </footer>
+
+  <script>
+    console.log("Autós weboldal betöltve!");
+  </script>
+
+</body>
+</html>
