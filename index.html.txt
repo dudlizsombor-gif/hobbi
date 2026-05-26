@@ -193,7 +193,7 @@
   </section>
 
   <footer>
-    © 2026 American Cars | Készítette: Te 🚗
+    © 2026 American Cars | Készítette: Dudli Zsombor
   </footer>
 
   <script>
